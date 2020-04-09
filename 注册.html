@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> 
+<head>
+	<meta charset="utf-8">
+    <title>复联账号注册</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style1.css" >
+</head>
+<body class="body1">
+<div class="video-1">
+	<video autoplay muted loop>
+		<source  src="movie/复联.mp4"  type="video/mp4">
+	</video>
+</div>
+        	<div class="login-form">
+				<div class="form-input">
+				<h1>Avengers'register</h1>
+				</div>
+             	<div class="form-input">
+					<input type="text" name="text" placeholder="账号">
+				</div>
+                <div class="form-input">
+					<input type="password" name="password" placeholder="密码">
+				</div>
+				<div class="form-input">
+					<input type="password" name="password" placeholder="确认密码">
+				</div>
+                <div class="form-input">
+					<input type="email" name="email" placeholder="电子邮箱">
+				</div>
+				<div class="form-input">
+					<input type="text" name="text" placeholder="手机号码">
+				</div>
+				<div class="form-input1">
+					<input type="text" name="text" placeholder="验证码">
+				</div>
+				<div class="form-input2">
+					<input type="submit" onClick="settime(this)" value="获取验证码">
+				</div>
+				<div class="form-input">
+					<a href="注册成功.html">
+					<button type="button" name="login in">注册</button>
+					</a>
+				</div>
+				<a href="复仇者联盟（登录）.html" class="forget1">返回登录</a>
+                <div class="text1">
+				<a href="帮助.html" class="forget">帮助?</a>
+				<input type="checkbox" name="checkbox" />
+                <acronym title="本网站注册账号为虚拟账号，并非实际账号！！！">《个人作品账号详情》</acronym>
+				</div>
+			</div>
+</body>
+	<script type="text/javascript">
+		var x=60;
+		function settime(val){
+			if(x==0){
+				val.removeAttribute("disabled");
+				val.value="获取验证码";
+				x=60;
+			}
+			else{
+				val.setAttribute("disabled", true);
+				val.value="重新发送（"+x+"秒）";
+				x--;
+				setTimeout(function(){
+					settime(val)
+				},1000)
+			}
+		}
+		</script>
+</html>
